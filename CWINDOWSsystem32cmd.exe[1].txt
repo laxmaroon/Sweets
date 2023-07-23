@@ -1,0 +1,207 @@
+Microsoft Windows [Version 10.0.22621.1992]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Lovia E B> cd D:\Projects\Sweets
+
+C:\Users\Lovia E B> cd /D D:\Projects\Sweets
+
+D:\Projects\Sweets> git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+D:\Projects\Sweets> git checkout -b frontend
+Switched to a new branch 'frontend'
+
+D:\Projects\Sweets>git status
+On branch frontend
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+D:\Projects\Sweets>touch  git.ignore
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\Projects\Sweets>touch .gitignore
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\Projects\Sweets> git status
+On branch frontend
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+D:\Projects\Sweets> touch .gitignore
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\Projects\Sweets> dir
+ Volume in drive D is New Volume
+ Volume Serial Number is A698-D6B5
+
+ Directory of D:\Projects\Sweets
+
+23-07-2023  11.53 AM    <DIR>          .
+22-07-2023  07.01 PM    <DIR>          ..
+23-07-2023  11.54 AM                 6 .gitignore
+               1 File(s)              6 bytes
+               2 Dir(s)  115,163,504,640 bytes free
+
+D:\Projects\Sweets> git status
+On branch frontend
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Projects\Sweets> git -A
+unknown option: -A
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+D:\Projects\Sweets>git -a
+unknown option: -a
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+D:\Projects\Sweets>git add -A
+
+D:\Projects\Sweets>git status
+On branch frontend
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+
+
+D:\Projects\Sweets>git commit -m "Added .gitignore file"
+[frontend (root-commit) 83398bd] Added .gitignore file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+D:\Projects\Sweets>git status
+On branch frontend
+nothing to commit, working tree clean
+
+D:\Projects\Sweets> git checkout backend
+error: pathspec 'backend' did not match any file(s) known to git
+
+D:\Projects\Sweets>git checkout -b backend
+Switched to a new branch 'backend'
+
+D:\Projects\Sweets> git status
+On branch backend
+nothing to commit, working tree clean
+
+D:\Projects\Sweets>git checkout -b frontend
+fatal: a branch named 'frontend' already exists
+
+D:\Projects\Sweets>git checkout
+
+D:\Projects\Sweets>git status
+On branch backend
+nothing to commit, working tree clean
+
+D:\Projects\Sweets>git switch -b frontend
+error: unknown switch `b'
+usage: git switch [<options>] [<branch>]
+
+    -c, --create <branch>
+                          create and switch to a new branch
+    -C, --force-create <branch>
+                          create/reset and switch to a branch
+    --guess               second guess 'git switch <no-such-branch>'
+    --discard-changes     throw away local modifications
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge, diff3, or zdiff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+
+
+D:\Projects\Sweets>git switch frontend
+Switched to branch 'frontend'
+Your branch is up to date with 'origin/frontend'.
+
+D:\Projects\Sweets> git switch backend
+Switched to branch 'backend'
+
+D:\Projects\Sweets>git status
+On branch backend
+nothing to commit, working tree clean
+
+D:\Projects\Sweets>dir .gitignore
+ Volume in drive D is New Volume
+ Volume Serial Number is A698-D6B5
+
+ Directory of D:\Projects\Sweets
+
+23-07-2023  11.54 AM                 6 .gitignore
+               1 File(s)              6 bytes
+               0 Dir(s)  115,163,471,872 bytes free
+
+D:\Projects\Sweets> dir
+ Volume in drive D is New Volume
+ Volume Serial Number is A698-D6B5
+
+ Directory of D:\Projects\Sweets
+
+23-07-2023  11.53 AM    <DIR>          .
+22-07-2023  07.01 PM    <DIR>          ..
+23-07-2023  11.54 AM                 6 .gitignore
+               1 File(s)              6 bytes
+               2 Dir(s)  115,163,471,872 bytes free
+
+D:\Projects\Sweets>git status
+On branch backend
+nothing to commit, working tree clean
+
+D:\Projects\Sweets>mkdir gitignore
+
+D:\Projects\Sweets>dir
+ Volume in drive D is New Volume
+ Volume Serial Number is A698-D6B5
+
+ Directory of D:\Projects\Sweets
+
+23-07-2023  12.29 PM    <DIR>          .
+22-07-2023  07.01 PM    <DIR>          ..
+23-07-2023  11.54 AM                 6 .gitignore
+23-07-2023  12.29 PM    <DIR>          gitignore
+               1 File(s)              6 bytes
+               3 Dir(s)  115,163,471,872 bytes free
+
+D:\Projects\Sweets> mkdir .gitignore
+A subdirectory or file .gitignore already exists.
+
+D:\Projects\Sweets>
