@@ -215,10 +215,10 @@ function createMenuItem() {
     addToCartButton.onclick = showMessage;
     addToCartButton.style.padding = '5px 22px';
     addToCartButton.style.margin = '20px';
-    addToCartButton.style.borderColor = 'rgba(0, 0, 0, 0.3)';
-    addToCartButton.style.color = 'rgb(251,110,20)';
+    addToCartButton.style.borderColor = 'white';
+    addToCartButton.style.color = 'black';
     addToCartButton.style.fontFamily= '"Arial", sans-serif';
-    addToCartButton.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
+    addToCartButton.style.backgroundColor = 'white';
     // addToCartButton.style.borderColor = 'white';
 
     colDiv.appendChild(addToCartButton);
