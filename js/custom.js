@@ -113,11 +113,18 @@ function createMenuItem() {
     var itemName = document.createElement('h2');
     itemName.id = 'item-name';
     itemName.textContent = item_name;
+    itemName.style.fontFamily= '"Playfair Display", serif';
+    itemName.style.textTransform= 'uppercase';
+    itemName.style.color= 'rgb(2, 2, 2)';
+    itemName.style.backgroundColor= 'white';
+    itemName.style.borderRadius= '5% 5%';
+    
+    
     //itemName.style.textAlign = 'center';
     menuDiv.appendChild(itemName);
-
-
-
+    
+    
+    
     // Create the image element
     var imgElement = document.createElement('img');
     
@@ -130,30 +137,41 @@ function createMenuItem() {
     imgElement.style.boxShadow='0 2px 4px rgba(0, 0, 0, 0.3)';
     imgElement.style.display = 'block';
     imgElement.style.margin = '0 auto';
-
+    
+    
     // Add the image element to the document body
     menuDiv.appendChild(imgElement);
-
+    
     // Create a p element for description and set its text content
     var itemDescription = document.createElement('p');
     itemDescription.innerHTML = '<span id="item-description">'+description+'</span>';
-    itemDescription.style.textAlign = 
+    // itemDescription.style.textAlign = 
+    itemDescription.style.fontStyle= 'italic';
+    itemDescription.style.margin = '20px';
+    itemDescription.style.fontFamily = '"Playfair Display", serif';
+    itemDescription.style.backgroundColor = 'white';
     menuDiv.appendChild(itemDescription);
-
+    
     // Create a p element for price and set its text content
     var itemPrice = document.createElement('p');
     itemPrice.innerHTML = 'Price: Rs. <span id="item-price">0</span>';
+    itemPrice.style.fontFamily = '"Playfair Display", serif';
+    itemPrice.style.color = 'black';
+
     menuDiv.appendChild(itemPrice);
 
     // Create labels and radio buttons for size
     var sizeLabel = document.createElement('label');
     sizeLabel.htmlFor = 'size';
     sizeLabel.textContent = 'Size:';
+    sizeLabel.style.fontFamily= '"Arial", sans-serif';
+    sizeLabel.style.fontSize= '17px';
     menuDiv.appendChild(sizeLabel);
-
+    
     var regularRadio = document.createElement('input');
     regularRadio.type = 'radio';
     regularRadio.name = 'size';
+    regularRadio.style.fontFamily= '"Arial", sans-serif';
     regularRadio.value = 'Regular';
     regularRadio.checked = true;
     menuDiv.appendChild(regularRadio);
@@ -163,6 +181,7 @@ function createMenuItem() {
     largeRadio.type = 'radio';
     largeRadio.name = 'size';
     largeRadio.value = 'Large';
+    largeRadio.style.fontFamily= '"Arial", sans-serif';
     menuDiv.appendChild(largeRadio);
     menuDiv.appendChild(document.createTextNode('Large'));
     
@@ -173,8 +192,9 @@ function createMenuItem() {
     var quantityLabel = document.createElement('label');
     quantityLabel.htmlFor = 'quantity';
     quantityLabel.textContent = 'Quantity:';
+    quantityLabel.style.fontFamily= '"Arial", sans-serif';
     menuDiv.appendChild(quantityLabel);
-
+    
     var quantityInput = document.createElement('input');
     quantityInput.type = 'number';
     quantityInput.name = 'quantity';
@@ -191,8 +211,15 @@ function createMenuItem() {
     // Create a button with class "btn" and onclick attribute
     var addToCartButton = document.createElement('button');
     addToCartButton.classList.add('btn');
-    addToCartButton.textContent = 'Add to Cart';
+    addToCartButton.textContent = 'Place order';
     addToCartButton.onclick = showMessage;
+    addToCartButton.style.padding = '5px 22px';
+    addToCartButton.style.margin = '20px';
+    addToCartButton.style.borderColor = 'rgba(0, 0, 0, 0.3)';
+    addToCartButton.style.color = 'rgb(251,110,20)';
+    addToCartButton.style.fontFamily= '"Arial", sans-serif';
+    addToCartButton.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
+    // addToCartButton.style.borderColor = 'white';
 
     colDiv.appendChild(addToCartButton);
     rowDiv.appendChild(colDiv);
@@ -204,5 +231,5 @@ function createMenuItem() {
 
 // Function to handle button click event
 function showMessage() {
-    alert('Added to Cart!');
+    alert('Successfully Placed Order!');
 }
