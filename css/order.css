@@ -1,14 +1,31 @@
 /* Reset some default styles */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 body, h2, p {
     margin: 0;
     padding: 0;
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2;
+    color: #5e493a;
   }
-  
-  body {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    color: #000;
+  }
+  /* body {
+  } */
+  #item-description{
+    color: #000;
     font-family: 'Arial', sans-serif;
     background-color: #f3f3f3;
   }
-  
   .menu-item {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -17,14 +34,17 @@ body, h2, p {
     padding: 20px;
     max-width: 400px;
     margin: 20px auto;
+    text-align: center;
   }
   
   .menu-item h2 {
-    color: #d2691e;
+    /* color: #d2691e; */
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
   }
-  
+
+ 
   .menu-item p {
     color: #555;
     margin-bottom: 20px;
