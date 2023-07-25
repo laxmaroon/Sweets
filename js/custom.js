@@ -16,80 +16,92 @@ const Data = [
     {
         "item-no":'1',
         "item-name":"Dharwad Peda",
-        "item-desc": "Rich milk-based sweet <br> with khoya, sugar, and cardamom.",
-        "item-price": "300"
+        "item-desc": "Rich milk-based sweet with khoya, sugar, and cardamom.",
+        "item-price": "300",
+        "item-image": "images/Dharwad_Peda.jpg"
     },
     {
         "item-no":'2',
         "item-name":"Kozhukatta",
         "item-desc": "Dumplings filled with grated coconut and jaggery.",
-        "item-price": "250"
+        "item-price": "250",
+        "item-image": "images/Kozhukatta-2B.jpg"
     },
     {
         "item-no":'3',
         "item-name":"Rava Unde",
         "item-desc": "Sweet spheres made with semolina, ghee, sugar, and nuts.",
-        "item-price": "100"
+        "item-price": "100",
+        "item-image": "images/Rava-Laddoo.jpg"
     },
     {
         "item-no":'4',
         "item-name":"Unniyappam",
         "item-desc": "Banana fritters with rice flour, jaggery, and coconut.",
-        "item-price": "300"
+        "item-price": "300",
+        "item-image": "images/unniyappam.jpg"
     },
     {
         "item-no":'5',
         "item-name":"Badam Payasam",
         "item-desc": "Creamy almond pudding with milk, rice, and saffron.",
-        "item-price": "350"
+        "item-price": "350",
+        "item-image": "images/Badam-Payasam.jpg"
     },
     {
         "item-no":'6',
         "item-name":"Pal Payasam",
         "item-desc": "Traditional rice pudding prepared with milk and sugar.",
-        "item-price": "300"
+        "item-price": "300",
+        "item-image": "images/Pal_Payasam.jpg"
     },
     {
         "item-no":'7',
         "item-name":"Pumpkin Payasam",
         "item-desc": "A unique sweet treat blending pumpkin, jaggery, and coconut milk.",
-        "item-price": "300"
+        "item-price": "300",
+        "item-image": "images/pumpkin-payasam.jpg"
     },
     {
         "item-no":'8',
         "item-name":"Mysore Pak",
         "item-desc": "Decadent dessert featuring ghee, chickpea flour, and sugar.",
-        "item-price": "600"
+        "item-price": "600",
+        "item-image": "images/Mysore_Pak.png"
     },
     {
         "item-no":'9',
         "item-name":"Chiroti",
         "item-desc": "Crispy, flaky pastry made with refined flour, ghee, and powdered sugar.",
-        "item-price": "300"
+        "item-price": "300",
+        "item-image": "images/Chiroti.jpg"
     },
     {
         "item-no":'10',
         "item-name":"Kozhikodan Halwa",
         "item-desc": "Semolina-based delight with ghee, cashews, raisins, and sugar.",
-        "item-price": "300"
+        "item-price": "300",
+        "item-image": "images/halwa-kerala.avif"
     },
     {
         "item-no":'11',
         "item-name":"Belagavi Kunda",
         "item-desc": "Milk-based sweet delicacy with caramelized milk solids.",
-        "item-price": "300"
+        "item-price": "300",
+        "item-image": "images/Belegavi_Style_Kunda.jpg"
     },
     {
         "item-no":'12',
         "item-name":"Kajjaaya",
         "item-desc": "Deep-fried sweets made from jaggery, rice flour, and cardamom.",
-        "item-price": "300"
+        "item-price": "300",
+        "item-image": "images/Kajjaaya.png"
     }
 ]
 
 var description = Data[params['item-no']-1]['item-desc'];
 var item_name = Data[params['item-no']-1]['item-name'];
-
+var img_src = Data[params['item-no']-1]['item-image'];
 
 // Function to create and add the menu item HTML to the document
 function createMenuItem() {
@@ -110,10 +122,12 @@ function createMenuItem() {
     var imgElement = document.createElement('img');
     
     // Set the src and alt attributes
-    imgElement.src = 'images/Dharwad_Peda.jpg';
+    imgElement.src = img_src;
     imgElement.alt = 'Menu Item';
     imgElement.style.width = '50%';
-    imgElement.style.borderRadius = '50%';
+    imgElement.style.borderRadius = '25%';
+    imgElement.style.borderColor= 'white';
+    imgElement.style.boxShadow='0 2px 4px rgba(0, 0, 0, 0.3)';
     imgElement.style.display = 'block';
     imgElement.style.margin = '0 auto';
 

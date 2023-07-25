@@ -23,8 +23,9 @@
   display: grid;
   justify-items: center; 
   float: left;
-  /* This will center the items horizontally */
+  /* This will center the items horizontally  */
 }
+
 .menu-container {
   display: flex;
   justify-content: center;
@@ -41,6 +42,17 @@ body {
   background-color: #f5f5f5;
 }
 
+.fh5co-food-desc .order-button{
+  border-color: white;
+  padding: 0 10px;
+  border-radius: 10%;
+  cursor: pointer;
+      /* Box Shadow */
+      /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
+      margin-top: 10px;
+  
+  /* background-color: rgb(210, 206, 200); */
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -91,7 +103,6 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-
 
 
 
