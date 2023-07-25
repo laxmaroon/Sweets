@@ -40,8 +40,8 @@
                     <br><br>
                 </form>
                 </div>
-                <div class="image">
-                    <img src="../images/image.jpg">
+                <div class="image"> 
+                    <img src="../images/iconAdmin.png" alt='Admin'>
                 </div>
             </div>
         </div>
