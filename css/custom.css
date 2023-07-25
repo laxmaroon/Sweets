@@ -1,0 +1,97 @@
+.justify-content-center {
+  display: grid;
+  grid-template-columns: 1fr; /* Use one fraction unit for each column */
+  justify-items: center;  /* Center the content horizontally */
+}
+
+#fh5co-menus .fh5co-food-menu h2.fh5co-specials {
+  padding-left: 50px;
+}
+#fh5co-menus .fh5co-food-menu h2.fh5co-specials:before {
+  background: url(../images/star.png) no-repeat;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 64px;
+  height: 64px;
+}
+
+#fh5co-menus .menuContainer {
+  margin-top: 5%;
+  margin-left: 23%;
+  padding-left: 0px;
+  display: grid;
+  justify-items: center; 
+  float: left;
+  /* This will center the items horizontally */
+}
+.menu-container {
+  display: flex;
+  justify-content: center;
+}
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.menu-item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.menu-item label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.menu-item input[type="radio"],
+.menu-item input[type="number"] {
+  margin-right: 10px;
+}
+
+.menu-item button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
