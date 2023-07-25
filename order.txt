@@ -1,0 +1,34 @@
+// Wait for the DOM content to be loaded before adding event listeners
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all the "Order" buttons by their class name
+    const orderButtons = document.querySelectorAll(".order-button");
+
+    // Add event listeners to each "Order" button
+    orderButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            // When the "Order" button is clicked, handle the action here
+            // For this example, let's pass the selected item's details to the new order page using URL parameters
+
+            // Get the details of the food item from the parent element of the button
+            const menuItem = button.closest(".container");
+            const name = menuItem.querySelector(".fh5co-food-desc h3").innerText;
+            const description = menuItem.querySelector(".fh5co-food-desc p").innerText;
+            const price = menuItem.querySelector(".fh5co-food-pricing p").innerText;
+
+            // Construct the URL with the selected item's details as parameters
+            // 
+            const urlParams = new URLSearchParams({
+                name: name,
+                description: description,
+                price: price,
+            });
+            const url = `order.html?${urlParams.toString()}`;
+
+            // Redirect the user to the new order page with the selected item's details
+            window.location.href = url;
+        });
+    });
+});
+
+
+
