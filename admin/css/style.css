@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    /* border: 1px solid black; */
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.welcome {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: serif;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.tableFull {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table30 {
+    width: 30%;
+}
+
+table tr th {
+    border: 1px solid black;
+    padding: 1%;
+    text-align: center;
+}
+
+table tr td {
+    border: 1px solid black;
+    padding: 1%;
+    text-align: center;
+}
+
+
+.btn-primary {
+    background-color: #1e90ff;
+    padding: 1%;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: steelblue;
+}
+
+.btn-secondary {
+    background-color: #7ebd9f;
+    padding: 1%;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #07a056;
+}
+
+.btn-danger {
+    background-color: rgb(179, 33, 33);
+    padding: 1%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: red;
+}
+
+.success {
+    font-size: 1.3rem;
+    display: inline;
+    background-color: #07a056;
+    color: black;
+}
+
+.error {
+    font-size: 1.3rem;
+    display: inline;
+    background-color: #ff5c69;
+    color: #000;
+}
+
+/* Menu css */
+
+.menu {
+    border-bottom: 1px solid black;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 1%;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    /* color: ; */
+}
+
+/* 
+.menu ul li a:hover {
+    color: ;
+} */
+
+/* Main content css */
+
+.main-content {
+    /* margin: 1% 0; */
+    padding: 3% 0;
+    background-color: wheat;
+}
+
+.col4 {
+    width: 15%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+.footer {
+    background-color: #ccc;
+    color: grey;
+}
