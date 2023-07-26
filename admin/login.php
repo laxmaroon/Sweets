@@ -9,9 +9,9 @@
     <body>
         
         <div class="login">
-            <br><br><br>
-            <h2 class="text-center">Admin Login</h2>
             <br><br>
+            <h2 class="text-center">Admin Login</h2>
+            <br>
 
             <?php 
                 if(isset($_SESSION['login']))
@@ -25,6 +25,7 @@
                     echo $_SESSION['not-logged-in'];
                     unset($_SESSION['not-logged-in']);
                 }
+                // die('lol');
             ?>
             <br><br>
             <div class="container">
