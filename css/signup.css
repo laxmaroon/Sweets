@@ -65,6 +65,7 @@ body {
     font-size: 18px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
+    margin-right: 20px;
   }
   
   button:hover {
@@ -112,3 +113,11 @@ body {
     letter-spacing: 2px;
   }
   
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .error {
+    color:red;
+  }

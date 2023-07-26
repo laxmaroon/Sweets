@@ -2,8 +2,17 @@ function redirectToOrderPage() {
     window.location.href = "order.html";
 }
 
-function showMessage() {
-    alert("Added successfully");
+function login() {
+    var name = document.getElementById('name').value;
+    var password = document.getElementById('password').value;
+    if(name==''){
+        alert('Enter username');
+    } else if(password==''){
+        alert('Enter password');
+    }
+    else{
+        window.location.href = 'login.php?name='+name+'&password='+password;
+    }
 }
 
 var params = {};
@@ -11,6 +20,9 @@ location.search.slice(1).split("&").forEach(function(pair) {
     pair = pair.split("=");
     params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
 });
+
+if(params['item-no']>11)
+    window.location.href = 'index.html';
 
 const Data = [
     {
@@ -102,6 +114,7 @@ const Data = [
 var description = Data[params['item-no']-1]['item-desc'];
 var item_name = Data[params['item-no']-1]['item-name'];
 var img_src = Data[params['item-no']-1]['item-image'];
+var item_price = Data[params['item-no']-1]['item-price'];
 
 // Function to create and add the menu item HTML to the document
 function createMenuItem() {
@@ -154,7 +167,7 @@ function createMenuItem() {
     
     // Create a p element for price and set its text content
     var itemPrice = document.createElement('p');
-    itemPrice.innerHTML = 'Price: Rs. <span id="item-price">0</span>';
+    itemPrice.innerHTML = 'Price:<br>Regular: Rs. <span id="item-price">'+item_price+'</span><br>Large: Rs. <span id="item-price">'+2*item_price+'</span>';
     itemPrice.style.fontFamily = '"Playfair Display", serif';
     itemPrice.style.color = 'black';
 
@@ -196,6 +209,7 @@ function createMenuItem() {
     menuDiv.appendChild(quantityLabel);
     
     var quantityInput = document.createElement('input');
+    quantityInput.id = 'qty';
     quantityInput.type = 'number';
     quantityInput.name = 'quantity';
     quantityInput.value = '1';
@@ -231,5 +245,8 @@ function createMenuItem() {
 
 // Function to handle button click event
 function showMessage() {
-    alert('Successfully Placed Order!');
+    var getSelectedValue = document.querySelector( 'input[name="size"]:checked');
+    var size = getSelectedValue.value;
+    var qty = document.getElementById('qty').value;
+    window.location.href='place-order.php?size='+size+'&qty='+qty;
 }
