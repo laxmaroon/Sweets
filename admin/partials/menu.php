@@ -19,6 +19,7 @@
                 <li><a href="manage-admin.php">Admin</a></li>
                 <li><a href="manage-item.php">Item</a></li>
                 <li><a href="manage-order.php">Order</a></li>
+                <li><a href="manage-customer.php">Customer</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>

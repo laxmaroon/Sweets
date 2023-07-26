@@ -72,7 +72,7 @@
                     <tr>
                         <td>Price: </td>
                         <td>
-                            <input type="text" name="item_price" value="<?php echo $item_price?>">
+                            <input type="number" name="item_price" value="<?php echo $item_price?>">
                         </td>
                     </tr>
 

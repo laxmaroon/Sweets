@@ -117,7 +117,7 @@ table tr td {
 .menu ul li a {
     text-decoration: none;
     font-weight: bold;
-    /* color: ; */
+    color: #1b72c9;
 }
 
 /* 
@@ -134,7 +134,7 @@ table tr td {
 }
 
 .col4 {
-    width: 15%;
+    width: 18%;
     background-color: white;
     margin: 1%;
     padding: 2%;
@@ -143,5 +143,28 @@ table tr td {
 
 .footer {
     background-color: #ccc;
-    color: grey;
+    color: rgb(85, 85, 85);
+}
+
+.heart {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: rgb(187, 5, 5);
+}
+
+.creators {
+    display: inline;
+}
+
+.creators > a{
+    color: red;
+    text-decoration: none;
+}
+
+.creators a:visited {
+    color: black;
+}
+
+.creators a:hover {
+    color: blue;
 }
