@@ -19,14 +19,10 @@
     if(isset($_SESSION['user'])){
         echo '<script>
             if(confirm("Already logged in. Do you want to log out?")==true){
-                window.location.href="signup.php?logout=true";
-            } else window.location.href="index.html";
+                window.location.href="logout.php";
+            } else window.location.href="index.html#menu";
         </script>';
     }
-
-    $logout = $_GET['logout'];
-    if($logout=='true')
-        header('location:logout.php?signup=true');
 
     $fnameErr = $lnameErr = $addErr = $emailErr = $passErr = $passErr = '';
     $fname = $lname = $address = $email = $password = $confirmPassword = ''; 
@@ -150,7 +146,7 @@
 
                 if($result2==TRUE){
                     $_SESSION['user'] = $email;
-                    header('location:'.'index.html');
+                    header('location:'.'index.html#menu');
                 } else{
                     $_SESSION['signup'] = '<div class="error">Sign up Failed</div>';
                     header('location:'.'signup.php');
