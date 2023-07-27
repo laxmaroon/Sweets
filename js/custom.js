@@ -21,12 +21,17 @@ location.search.slice(1).split("&").forEach(function(pair) {
     params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
 });
 
-if(params['item-no']>11)
+// if(params['show'] == 'true'){
+    
+// }
+
+if(params['item-no']>12)
     window.location.href = 'index.html';
 
 const Data = [
     {
         "item-no":'1',
+        "sku": "LADD-DHAR-",
         "item-name":"Dharwad Peda",
         "item-desc": "Rich milk-based sweet with khoya, sugar, and cardamom.",
         "item-price": "300",
@@ -34,6 +39,7 @@ const Data = [
     },
     {
         "item-no":'2',
+        "sku": "LADD-KOZH-",
         "item-name":"Kozhukatta",
         "item-desc": "Dumplings filled with grated coconut and jaggery.",
         "item-price": "250",
@@ -41,6 +47,7 @@ const Data = [
     },
     {
         "item-no":'3',
+        "sku": "LADD-RAV-",
         "item-name":"Rava Unde",
         "item-desc": "Sweet spheres made with semolina, ghee, sugar, and nuts.",
         "item-price": "100",
@@ -48,6 +55,7 @@ const Data = [
     },
     {
         "item-no":'4',
+        "sku": "LADD-UNNI-",
         "item-name":"Unniyappam",
         "item-desc": "Banana fritters with rice flour, jaggery, and coconut.",
         "item-price": "300",
@@ -55,6 +63,7 @@ const Data = [
     },
     {
         "item-no":'5',
+        "sku": "PAYA-BADA-",
         "item-name":"Badam Payasam",
         "item-desc": "Creamy almond pudding with milk, rice, and saffron.",
         "item-price": "350",
@@ -62,6 +71,7 @@ const Data = [
     },
     {
         "item-no":'6',
+        "sku": "PAYA-PALP-",
         "item-name":"Pal Payasam",
         "item-desc": "Traditional rice pudding prepared with milk and sugar.",
         "item-price": "300",
@@ -69,6 +79,7 @@ const Data = [
     },
     {
         "item-no":'7',
+        "sku": "PAYA-PUMP-",
         "item-name":"Pumpkin Payasam",
         "item-desc": "A unique sweet treat blending pumpkin, jaggery, and coconut milk.",
         "item-price": "300",
@@ -76,6 +87,7 @@ const Data = [
     },
     {
         "item-no":'8',
+        "sku": "SPEC-MYSO-",
         "item-name":"Mysore Pak",
         "item-desc": "Decadent dessert featuring ghee, chickpea flour, and sugar.",
         "item-price": "600",
@@ -83,6 +95,7 @@ const Data = [
     },
     {
         "item-no":'9',
+        "sku": "SPEC-CHIR-",
         "item-name":"Chiroti",
         "item-desc": "Crispy, flaky pastry made with refined flour, ghee, and powdered sugar.",
         "item-price": "300",
@@ -90,6 +103,7 @@ const Data = [
     },
     {
         "item-no":'10',
+        "sku": "SPEC-HALW-",
         "item-name":"Kozhikodan Halwa",
         "item-desc": "Semolina-based delight with ghee, cashews, raisins, and sugar.",
         "item-price": "300",
@@ -97,6 +111,7 @@ const Data = [
     },
     {
         "item-no":'11',
+        "sku": "SPEC-KUND-",
         "item-name":"Belagavi Kunda",
         "item-desc": "Milk-based sweet delicacy with caramelized milk solids.",
         "item-price": "300",
@@ -104,6 +119,7 @@ const Data = [
     },
     {
         "item-no":'12',
+        "sku": "SPEC-KAJJ-",
         "item-name":"Kajjaaya",
         "item-desc": "Deep-fried sweets made from jaggery, rice flour, and cardamom.",
         "item-price": "300",
@@ -115,6 +131,7 @@ var description = Data[params['item-no']-1]['item-desc'];
 var item_name = Data[params['item-no']-1]['item-name'];
 var img_src = Data[params['item-no']-1]['item-image'];
 var item_price = Data[params['item-no']-1]['item-price'];
+var sku = Data[params['item-no']-1]['sku'];
 
 // Function to create and add the menu item HTML to the document
 function createMenuItem() {
@@ -248,5 +265,5 @@ function showMessage() {
     var getSelectedValue = document.querySelector( 'input[name="size"]:checked');
     var size = getSelectedValue.value;
     var qty = document.getElementById('qty').value;
-    window.location.href='place-order.php?size='+size+'&qty='+qty;
+    window.location.href='place-order.php?sku='+sku+'&size='+size+'&qty='+qty;
 }

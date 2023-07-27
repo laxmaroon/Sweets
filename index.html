@@ -62,12 +62,11 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/custom.js" defer></script>
+	<script src="js/custom.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
 	</head>
 	<body>
 
@@ -108,11 +107,40 @@
 					</div>
 					<div class="fh5co-menu-2">
 						<a href="#" data-nav-section="menu">Menu</a>
-						<a href="#" data-nav-section="events">Events</a>
-						<a href="#" data-nav-section="Account">Account</a>
+						<!-- <button data-login-button class='login-button'> -->
+							<a href="#" data-nav-section="Account">Login</a>
+						<!-- </button> -->
+						<!-- <button data-logout-button class='logout-button'> -->
+							<a href="#" data-nav-section="Account">Logout</a>
+						<!-- </button> -->
+						<!-- <script>function toggleButtons() {
+							// Get references to the login and logout buttons
+							// var loginButton = document.querySelector('[data-login-button]');
+							// var logoutButton = document.querySelector('[data-logout-button]');
+		
+							// Toggle the visibility of the buttons using the class 'hide-button'
+							// loginButton.classList.toggle('hide-button');
+							// logoutButton.classList.toggle('hide-button');
+							}
+						</script> -->
 					</div>
 				</div>
-				
+				<script>
+					// Function to change the link text when the button is clicked
+					// function changeLinkText() {
+					// 	var link = document.getElementById('login-out');
+					// 	link.innerText = 'logout'; // Update the link text here
+					// }
+					// function toggleButtons() {
+					// // Get references to the login and logout buttons
+					// var loginButton = document.querySelector('[data-login-button]');
+					// var logoutButton = document.querySelector('[data-logout-button]');
+
+					// // Toggle the visibility of the buttons using the class 'hide-button'
+					// loginButton.classList.toggle('hide-button');
+					// logoutButton.classList.toggle('hide-button');
+				    // }
+				</script>
 			</div>
 		</div>
 

@@ -4,7 +4,7 @@
         echo '<script>
             if(confirm("Already logged in. Do you want to log out?")==true){
                 window.location.href="logout.php";
-            } else window.location.href="index.html$menu";
+            } else window.location.href="index.html$menu?logout-show=true";
         </script>';
     }
     $username = $_GET['name'];
@@ -31,7 +31,7 @@
             if($password = $row['password']){
                 // die('lol');
                 $_SESSION['user'] = $username;
-                header('location:index.html#menu');
+                header('location:index.html#menu?logout-show=true');
             }
             else{
                 // die('lol');

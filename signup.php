@@ -16,6 +16,9 @@
 <body>
     <?php include('config/cust-session.php');
     
+    // echo $_SESSION['user'];
+    // die('lol');
+
     if(isset($_SESSION['user'])){
         echo '<script>
             if(confirm("Already logged in. Do you want to log out?")==true){
