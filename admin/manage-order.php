@@ -23,7 +23,6 @@
             <table class="tableFull">
                 <tr>
                     <th><pre>S.N  </pre></th>
-                    <th>Order ID</th>
                     <th>Created at</th>
                     <th>Item ID</th>
                     <th>Quantity</th>
@@ -46,7 +45,6 @@
                             while($rows = mysqli_fetch_assoc($result)){
 
                                 $id = $rows['row_id'];
-                                $order_id = $rows['order_id'];
                                 $created_at = $rows['created_at'];
                                 $item_id = $rows['item_id'];
                                 $qty = $rows['quantity'];
@@ -58,7 +56,6 @@
                 ?>
                 <tr>
                     <td><?php echo $sn++ ?></td>
-                    <td><?php echo $order_id ?></td>
                     <td><?php echo $created_at ?></td>
                     <td><?php echo $item_id ?></td>
                     <td><?php echo $qty ?></td>

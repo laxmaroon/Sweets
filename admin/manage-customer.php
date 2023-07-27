@@ -41,8 +41,8 @@
                             <td><?php echo $phone;?></td>
                             <td><?php echo $email;?></td>
                             <td>
-                                <a href="address-details.php?add_id=<?php echo $add_id?>" class="btn-primary">Get customer address</a>
-                                <a href="address-details.php?add_id=<?php echo $add_id?>" class="btn-secondary">Show customer orders</a>
+                                <a href="customer-address.php?add_id=<?php echo $add_id?>" class="btn-primary">Get customer address</a>
+                                <a href="customer-orders.php?add_id=<?php echo $add_id?>" class="btn-secondary">Show customer orders</a>
                                 <!-- <a href="address-details.php?add_id=<?php echo $add_id?>" class="btn-secondary">Show customer orders</a> -->
                             </td>
                         </tr>
