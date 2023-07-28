@@ -68,7 +68,7 @@
         {
             //Login Success
             $_SESSION['login'] = '<div class="success text-center">Login Successful.</div>';
-            $_SESSION['user'] = $username; //To check whether the user is logged in or not (logout will unset it)
+            $_SESSION['admin'] = $username; //To check whether the user is logged in or not (logout will unset it)
 
             //Redirect to home page dashboard
             header('location:'.'index.php');

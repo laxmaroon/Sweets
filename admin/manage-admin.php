@@ -79,6 +79,43 @@
                     }
                 ?>
             </table>
+
+            <br><br><br>
+            
+            <h2 class='text-center'>Staff List</h2>
+            <table class='tableFull'>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Position</th>
+                </tr>
+            <?php
+                $query5 = "SELECT fname, lname, position
+                FROM staff;";
+                $result5 = mysqli_query($con, $query5) or die(mysqli_error());
+
+                if($result5==TRUE){
+                    //Count no. of rows                        
+                    $count = mysqli_num_rows($result5);
+                    if($count>0){
+                        while($rows = mysqli_fetch_assoc($result5)){
+                            $fname = $rows['fname'];
+                            $lname = $rows['lname'];
+                            $position = $rows['position'];
+                            ?>
+
+
+                            <tr>
+                                <td><?php echo $fname?></td>
+                                <td><?php echo $lname?></td>
+                                <td><?php echo $position?></td>
+                            </tr>
+                            <?php
+                        }
+                    }
+                }
+                ?>
+            </table>
         </div>    
     </div>
         

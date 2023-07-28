@@ -1,4 +1,4 @@
-<?php include('partials/menu.php') ?>
+<?php include('partials/menu.php'); ?>
 
 <div class="main-content">
 
@@ -10,7 +10,7 @@
 
         <table class="tableFull">
             <tr>
-                <th>S.N</th>
+                <th><pre>S.N  </pre></th>
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Phone</th>
@@ -18,7 +18,7 @@
                 <th>Actions</th>
             </tr>
             <?php
-                $query = "SELECT cust_fname, cust_lname, phone, email, add_id 
+                $query = "SELECT * 
                 FROM customers;";
                 $sn = 1;
                 $result = mysqli_query($con, $query) or die(mysqli_error());
@@ -28,6 +28,7 @@
                     $count = mysqli_num_rows($result);
                     if($count>0){
                         while($rows = mysqli_fetch_assoc($result)){
+                            $cust_id = $rows['cust_id'];
                             $cust_fname = $rows['cust_fname'];
                             $cust_lname = $rows['cust_lname'];
                             $phone = $rows['phone'];
@@ -42,7 +43,7 @@
                             <td><?php echo $email;?></td>
                             <td>
                                 <a href="customer-address.php?add_id=<?php echo $add_id?>" class="btn-primary">Get customer address</a>
-                                <a href="customer-orders.php?add_id=<?php echo $add_id?>" class="btn-secondary">Show customer orders</a>
+                                <a href="customer-orders.php?cust_id=<?php echo $cust_id?>" class="btn-secondary">Show customer orders</a>
                                 <!-- <a href="address-details.php?add_id=<?php echo $add_id?>" class="btn-secondary">Show customer orders</a> -->
                             </td>
                         </tr>
@@ -58,4 +59,4 @@
 </div>
 
 
-<?php include('partials/footer.php')?>
+<?php include('partials/footer.php'); ?>

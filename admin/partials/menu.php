@@ -25,5 +25,5 @@
         </div>
     </div>
     <div class="text-center welcome">
-        <?php echo 'Welcome '.$_SESSION['user']; ?>
+        <?php echo 'Welcome '.$_SESSION['admin']; ?>
     </div>
