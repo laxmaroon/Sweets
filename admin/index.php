@@ -65,8 +65,8 @@
             <h2>Inventory (items to prepare)</h2>
             <br>
             
-            <a href="add-100.php?id=<?php echo$id;?>" class="btn-primary">Add 100</a> 
-            
+            <a href="add-100.php" class="btn-primary">Add 100</a> 
+
             <br><br>
             <table class='tableFull'>
                 <tr>
