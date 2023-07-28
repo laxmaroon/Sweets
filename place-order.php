@@ -90,10 +90,20 @@
                                         VALUES(NOW(), '$item_id', '$qty', '$cust_id', 0, '$add_id');";        }
                             $result3=mysqli_query($con, $query3);
                             if($result3==TRUE){
-                                echo "<script>
-                                        alert('You have successfully placed the order! Expect the delivery within two hours.');
-                                        window.close(); 
-                                        </script>";
+
+                                $query5 = "UPDATE inventory
+                                SET quantity = quantity - '$qty'
+                                WHERE item_id = '$item_id';";
+                                $result5 = mysqli_query($con, $query5);
+
+                                if($result5==TRUE){
+                                    echo "<script>
+                                            alert('You have successfully placed the order! Expect the delivery within two hours.');
+                                            window.close(); 
+                                            </script>";
+                                } else{
+                                    echo "<script> window.close(); </script>";
+                                }
                             }
                             else{
                                 header('location:index.html');
