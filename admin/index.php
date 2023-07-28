@@ -61,7 +61,13 @@
             <div class="clearfix"></div>
             
             <br><br><br>
-            <h2 class='text-center'>Inventory (items to prepare)</h2>
+
+            <h2>Inventory (items to prepare)</h2>
+            <br>
+            
+            <a href="add-100.php?id=<?php echo$id;?>" class="btn-primary">Add 100</a> 
+            
+            <br><br>
             <table class='tableFull'>
                 <tr>
                     <th>Item ID</th>
